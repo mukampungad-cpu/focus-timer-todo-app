@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #3d3028;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.navbar a.active {
+  background: #a47752;
+}
+
+.page-container,
+.todo-container {
+  width: min(90%, 650px);
+  margin: 55px auto;
+  text-align: center;
+}
+
+.focus-timer {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.timer-display {
+  font-size: 65px;
+  font-weight: bold;
+  margin: 25px 0;
+  color: #654321;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #795548;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5d4037;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sessions-counter {
+  margin-top: 25px;
+  color: #654321;
+}
+
+.todo-container {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.task-summary {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.task-list {
+  padding: 0;
+  list-style: none;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-list label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+
+.task-list .completed label {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.delete-button {
+  background: #b23b3b;
+}
+
+.empty-message {
+  color: #888;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .timer-display {
+    font-size: 48px;
+  }
+}
